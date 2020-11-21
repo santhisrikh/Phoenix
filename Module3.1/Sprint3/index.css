@@ -1,0 +1,22 @@
+#box{
+    display: grid;
+    grid-template-columns: 500px 500px;
+    grid-template-rows: auto auto;
+    grid-gap: 10px;
+    justify-content: center;
+    padding:10px;
+}
+.card__item{
+    display: flex;
+    border: 2px solid gray;
+    border-radius: 10px;
+
+}
+.card__img{
+    margin:auto;
+    margin-right:20px ;
+}
+.card__item img{
+    height: 150px;
+    width: 150px;
+}
