@@ -14,6 +14,7 @@
 <body>
     <div class="container-fluid">
       <p class="text-secondary mt-2">Challenges Solved with Sanity</p >
+         <!-- challenges grid in large screen each card takes 4 columns im medium screen card 1 and 2 takes 6 columns and card 3 gets an offset of 3  -->
         <div class="row">
           <div class="col-lg-4 col-md-6 col-sm-12 mt-2">
             <div class="card h-100" >
@@ -52,6 +53,15 @@
 
           </div>
           <p class="text-muted mt-3">Explore Solutions</p>
+	<!-- solutions grid section 
+          large screen - two rows and each row will have three cards i.e 4 columns each
+          Medium Screen - three rows each row will have 2 cards i.e 6 columns per card
+          Small screen - six rows and one card per each row i.e 12 columns per card
+          You can find the svg under icon tab in the documentation
+          Order of the cards
+          Large => 1 2 3 4 5 6
+          Medium =>5 6 1 2 3 4
+          Small => 3 4 5 6 1 2 -->
           <div class="row mt-2">
             <div class="col-lg-4 col-md-6 col-sm-12 order-lg-1 order-md-5 order-sm-3">
               <div class="card mt-2" style="height: 7rem">
@@ -112,11 +122,6 @@
               </div>
             </div>
           </div>
-    </div>
-         
-            </body>
-
-    
-    
+    </div>      
 </body>
 </html>
