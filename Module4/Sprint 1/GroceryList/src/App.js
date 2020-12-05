@@ -1,5 +1,5 @@
 import React from "react";
-import Groceries from "./sprint/GroceryDetails";
+import Groceries from "./components/GroceryDetails";
 
 const App = () => {
 	return (
