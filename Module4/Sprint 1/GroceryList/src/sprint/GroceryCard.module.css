@@ -1,0 +1,17 @@
+.card {
+    display: flex;
+    border:2px solid black;
+    margin:5px;
+    width : 500px;
+    border-radius: 15px;
+}
+.card img{
+    margin : 5px;
+}
+.card button{
+    float :right
+}
+.card_body{
+    margin:3px;
+
+}
