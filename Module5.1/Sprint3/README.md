@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+### Zomato - Pagination
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+-  Use `React Redux Hooks and Material UI`
 
-## Available Scripts
 
-In the project directory, you can run:
+- Use the Zomato API
 
-### `yarn start`
+- register for it on `https://developers.zomato.com/api`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- read the documentation `https://developers.zomato.com/documentation`
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- use the `/search` endpoint
 
-### `yarn test`
+- `https://developers.zomato.com/api/v2.1/search`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- use the API key to pass the `user-key` as a header when making Axios request, try in postman as well
 
-### `yarn build`
+- Create an application which will do the following things
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  - User should be able to search based on the given query.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  - On submit get the relevant restaurant details
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  - Display the details in the form of cards `https://material-ui.com/components/cards/#complex-interaction`  with the information obtained from the response.
 
-### `yarn eject`
+  - Implement Pagination using material UI  refer to this link `https://material-ui.com/components/pagination/#controlled-pagination`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+  - Use `start` and `count` parameters from the Zomato API to implement pagination. (keep count = 10 for now if you want you can take a dropdown with different count per page 5,10, or 20 onChange display the results)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  - For example on clicking page number 1  display first 10 results of a query q = pizza
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+  - So `start` should be 0 and  `count`  should be 10  similarly for page 2 the start = (page number - 1 ) * count(start = 10 and count = 10 )
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+  - `https://developers.zomato.com/api/v2.1/search?q=pizza&start=10&count=10&sort=cost&order=asc`
+  - Keep a dropdown menu to sort results by  `cost, rating and real_distance` as options (can refer zomato document) and order by  `asc` and `desc` as options.
 
-## Learn More
+  ![](https://i.imgur.com/rlpRWL1.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  ### Features 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+  - User Should be able to search restaurants by a keyword.
 
-### Code Splitting
+  - Able to display 10 results per page implement pagination using Material UI.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+  - On clicking page number pass start and count params and display the results
 
-### Analyzing the Bundle Size
+  - Able to sort the results by rating cost and real_distance.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+  - Use hooks, follow the coding standards and good naming convention.
+		
 
-### Making a Progressive Web App
+### Rules for Submission
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Submissions after the deadline will not be evaluated. (no reasons entertained)
+- Screenshots are not acceptable, record a video switch on your camera and explain the features.  
+- Length of the video should be less than 2min.
